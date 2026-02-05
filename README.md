@@ -1,6 +1,6 @@
 # 🐯 Tiger Fitness Center Management System
 
-![Banner](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+
 ![Framework](https://img.shields.io/badge/.NET-8.0-blueviolet)
 ![Architecture](https://img.shields.io/badge/Architecture-MVC-blue)
 
