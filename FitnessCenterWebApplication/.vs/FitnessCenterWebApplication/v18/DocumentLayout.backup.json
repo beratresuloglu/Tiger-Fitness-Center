@@ -1,0 +1,145 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|c:\\users\\berat\\documents\\my projects in vs\\fitnesscenterwebapplication\\fitnesscenterwebapplication\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|solutionrelative:fitnesscenterwebapplication\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|c:\\users\\berat\\documents\\my projects in vs\\fitnesscenterwebapplication\\fitnesscenterwebapplication\\views\\appointment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|solutionrelative:fitnesscenterwebapplication\\views\\appointment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|c:\\users\\berat\\documents\\my projects in vs\\fitnesscenterwebapplication\\fitnesscenterwebapplication\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|solutionrelative:fitnesscenterwebapplication\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|c:\\users\\berat\\documents\\my projects in vs\\fitnesscenterwebapplication\\fitnesscenterwebapplication\\controllers\\trainercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|solutionrelative:fitnesscenterwebapplication\\controllers\\trainercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|c:\\users\\berat\\documents\\my projects in vs\\fitnesscenterwebapplication\\fitnesscenterwebapplication\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|solutionrelative:fitnesscenterwebapplication\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|c:\\users\\berat\\documents\\my projects in vs\\fitnesscenterwebapplication\\fitnesscenterwebapplication\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|solutionrelative:fitnesscenterwebapplication\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|c:\\users\\berat\\documents\\my projects in vs\\fitnesscenterwebapplication\\fitnesscenterwebapplication\\views\\trainer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85FE9F63-211A-4163-A319-971248AE66E5}|FitnessCenterWebApplication\\FitnessCenterWebApplication.csproj|solutionrelative:fitnesscenterwebapplication\\views\\trainer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 86,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AiController.cs",
+              "DocumentMoniker": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\AiController.cs",
+              "RelativeDocumentMoniker": "FitnessCenterWebApplication\\Controllers\\AiController.cs",
+              "ToolTip": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\AiController.cs",
+              "RelativeToolTip": "FitnessCenterWebApplication\\Controllers\\AiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:22:42.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "FitnessCenterWebApplication\\Controllers\\ServiceController.cs",
+              "ToolTip": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "FitnessCenterWebApplication\\Controllers\\ServiceController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:13:00.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "FitnessCenterWebApplication\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "FitnessCenterWebApplication\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:13:01.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TrainerController.cs",
+              "DocumentMoniker": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\TrainerController.cs",
+              "RelativeDocumentMoniker": "FitnessCenterWebApplication\\Controllers\\TrainerController.cs",
+              "ToolTip": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\TrainerController.cs",
+              "RelativeToolTip": "FitnessCenterWebApplication\\Controllers\\TrainerController.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAowNMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:13:01.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Views\\Trainer\\Create.cshtml",
+              "RelativeDocumentMoniker": "FitnessCenterWebApplication\\Views\\Trainer\\Create.cshtml",
+              "ToolTip": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Views\\Trainer\\Create.cshtml",
+              "RelativeToolTip": "FitnessCenterWebApplication\\Views\\Trainer\\Create.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAALoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T16:13:01.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Views\\Appointment\\Create.cshtml",
+              "RelativeDocumentMoniker": "FitnessCenterWebApplication\\Views\\Appointment\\Create.cshtml",
+              "ToolTip": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Views\\Appointment\\Create.cshtml",
+              "RelativeToolTip": "FitnessCenterWebApplication\\Views\\Appointment\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T16:13:01.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "FitnessCenterWebApplication\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\BERAT\\Documents\\My projects in VS\\FitnessCenterWebApplication\\FitnessCenterWebApplication\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "FitnessCenterWebApplication\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAcwMoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:13:01.111Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

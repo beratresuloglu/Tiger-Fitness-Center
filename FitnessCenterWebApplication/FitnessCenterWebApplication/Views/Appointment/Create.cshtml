@@ -1,0 +1,177 @@
+﻿@model FitnessCenterWebApplication.Models.Entities.Appointment
+
+@{
+    ViewData["Title"] = "Yeni Randevu";
+}
+
+<style>
+    /* MHRS Tarzı Slot Kutuları */
+    .time-slot {
+        cursor: pointer;
+        transition: all 0.2s;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+
+        .time-slot:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .time-slot.selected {
+            background-color: #198754 !important; /* Yeşil */
+            color: white !important;
+            border-color: #198754 !important;
+        }
+
+        .time-slot.full {
+            background-color: #e9ecef;
+            color: #adb5bd;
+            cursor: not-allowed;
+            text-decoration: line-through;
+            border-color: #dee2e6;
+        }
+</style>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-calendar-alt me-2"></i>Randevu Planla</h5>
+                </div>
+                <div class="card-body p-4">
+
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                    <form asp-action="Create" method="post" id="appointmentForm">
+                        @Html.AntiForgeryToken()
+
+                        <input type="hidden" asp-for="StartTime" id="SelectedTimeInput" />
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Hizmet Seçimi</label>
+                            <select asp-for="ServiceId" id="ServiceSelect" class="form-select" asp-items="ViewBag.Services">
+                                <option value="">-- Hizmet Seçiniz --</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Antrenör Seçimi</label>
+                            <select asp-for="TrainerId" id="TrainerSelect" class="form-select" disabled>
+                                <option value="">-- Önce Hizmet Seçin --</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="AppointmentDate" class="form-label fw-bold">Tarih</label>
+                            <input asp-for="AppointmentDate" id="DateSelect" type="date" class="form-control"
+                                   value="@DateTime.Now.ToString("yyyy-MM-dd")" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold d-block">Uygun Saatler</label>
+                            <div id="SlotsContainer" class="row g-2">
+                                <div class="col-12 text-muted small text-center p-3 border rounded bg-light">
+                                    <i class="fas fa-info-circle me-1"></i> Saatleri görmek için Hizmet, Antrenör ve Tarih seçiniz.
+                                </div>
+                            </div>
+                            <span asp-validation-for="StartTime" class="text-danger mt-2 d-block"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Notes" class="form-label fw-bold">Notlar</label>
+                            <textarea asp-for="Notes" class="form-control" rows="2"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="Index" class="btn btn-outline-secondary">Geri Dön</a>
+                            <button type="submit" class="btn btn-success px-4" id="btnSubmit" disabled>
+                                <i class="fas fa-check me-1"></i>Randevuyu Onayla
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script>
+        const serviceSelect = document.getElementById('ServiceSelect');
+        const trainerSelect = document.getElementById('TrainerSelect');
+        const dateSelect = document.getElementById('DateSelect');
+        const slotsContainer = document.getElementById('SlotsContainer');
+        const timeInput = document.getElementById('SelectedTimeInput');
+        const submitBtn = document.getElementById('btnSubmit');
+        // 1. Hizmete göre Antrenörleri Getir
+        serviceSelect.addEventListener('change', function() {
+            const serviceId = this.value;
+            trainerSelect.innerHTML = '<option value="">Yükleniyor...</option>';
+            trainerSelect.disabled = true;
+            slotsContainer.innerHTML = '<div class="col-12 text-center text-muted">Lütfen antrenör seçiniz.</div>';
+            if(serviceId) {
+                fetch(`/Appointment/GetTrainersByService?serviceId=${serviceId}`)
+                    .then(r => r.json())
+                    .then(data => {
+                        trainerSelect.innerHTML = '<option value="">-- Antrenör Seçiniz --</option>';
+                        data.forEach(t => {
+                            trainerSelect.innerHTML += `<option value="${t.id}">${t.fullName}</option>`;
+                        });
+                        trainerSelect.disabled = false;
+                    });
+            }
+        });
+        // 2. Saatleri Getir 
+        function loadSlots() {
+            const trainerId = trainerSelect.value;
+            const serviceId = serviceSelect.value;
+            const date = dateSelect.value;
+            // Seçimi sıfırla
+            timeInput.value = "";
+            submitBtn.disabled = true;
+            if (trainerId && serviceId && date) {
+                slotsContainer.innerHTML = '<div class="col-12 text-center"><div class="spinner-border text-primary" role="status"></div><br>Saatler yükleniyor...</div>';
+                fetch(`/Appointment/GetAvailableSlots?trainerId=${trainerId}&serviceId=${serviceId}&date=${date}`)
+                    .then(r => r.json())
+                    .then(slots => {
+                        slotsContainer.innerHTML = '';
+                        if (slots.length === 0) {
+                            slotsContainer.innerHTML = '<div class="alert alert-warning w-100">Uygun saat bulunamadı veya çalışma saati dışı.</div>';
+                            return;
+                        }
+                        slots.forEach(slot => {
+                            // Dolu mu boş mu kontrolü
+                            const btnClass = slot.isFull ? 'btn-outline-secondary full' : 'btn-outline-primary time-slot';
+                            const onclickAttr = slot.isFull ? '' : `onclick="selectTime(this, '${slot.time}')"`;
+                            const html = `
+                                <div class="col-4 col-sm-3 col-md-2">
+                                    <div class="btn w-100 ${btnClass}" ${onclickAttr}>
+                                        ${slot.time}
+                                    </div>
+                                </div>
+                            `;
+                            slotsContainer.innerHTML += html;
+                        });
+                    });
+            }
+        }
+        trainerSelect.addEventListener('change', loadSlots);
+        dateSelect.addEventListener('change', loadSlots);
+        // 3. Saat Seçim Fonksiyonu (Tıklama ile çalışır)
+        window.selectTime = function(element, time) {
+            // Önceki seçimi kaldır
+            document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('selected'));
+            // Yeni seçimi işaretle
+            element.classList.add('selected');
+            // Gizli input'a değeri yaz
+            timeInput.value = time;
+            // Butonu aktif et
+            submitBtn.disabled = false;
+        };
+    </script>
+}

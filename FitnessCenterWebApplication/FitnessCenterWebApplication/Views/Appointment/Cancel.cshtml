@@ -1,0 +1,51 @@
+﻿@model FitnessCenterWebApplication.Models.Entities.Appointment
+
+@{
+    ViewData["Title"] = "Randevu İptali";
+}
+
+<div class="modal fade" id="cancelModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-dark">
+                <h5 class="modal-title"><i class="fas fa-exclamation-circle me-2"></i>Randevu İptali</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="Cancel" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <input type="hidden" name="id" id="cancelAppointmentId" />
+
+                    <div class="mb-3">
+                        <label for="reason" class="form-label fw-bold">İptal Nedeni:</label>
+
+                        <textarea name="reason"
+                                  id="cancelReasonInput"
+                                  class="form-control"
+                                  rows="3"
+                                  required
+                                  maxlength="100"
+                                  placeholder="Lütfen iptal nedenini belirtiniz (Maks 100 karakter)..."
+                                  oninput="updateCharCount(this)"></textarea>
+
+                        <div class="d-flex justify-content-end mt-1">
+                            <small class="text-muted" id="charCount">0 / 100</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                    <button type="submit" class="btn btn-warning">Randevuyu İptal Et</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateCharCount(textarea) {
+        var currentLength = textarea.value.length;
+        var maxLength = textarea.getAttribute("maxlength");
+        document.getElementById("charCount").innerText = currentLength + " / " + maxLength;
+    }
+</script>
