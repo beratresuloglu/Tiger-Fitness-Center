@@ -65,7 +65,11 @@ Proje modern teknolojiler ve temiz kod prensipleriyle inşa edildi:
     </td>
   </tr>
 </table>
+
+
 ---
+
+
 ## 👨‍💻 Geliştirici
 
 **Berat Resuloğlu**
